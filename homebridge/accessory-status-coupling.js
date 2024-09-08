@@ -1,5 +1,8 @@
-const INITIATOR_SERVICE_NAME = 'Plant Lights';
-const RECEIVER_SERVICE_NAME = 'Plant Ceiling';
+// https://github.com/grrowl/homebridge-plugin-automation
+// this script was written for homebridge-plugin-automation@1.0.2
+
+const INITIATOR_SERVICE_NAME = '';
+const RECEIVER_SERVICE_NAME = '';
 
 automation.listen(function (event) {
   const initiatorOnStatus = event.serviceCharacteristics.find((c) => c.type === "On");
