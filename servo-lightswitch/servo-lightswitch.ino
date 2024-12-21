@@ -83,6 +83,12 @@ void handleOff() {
   server.send(200, "text/plain", "Switch turned OFF");
 }
 
+void handleStatus() {
+  logMessage("STATUS endpoint hit");
+  server.enableCORS(true);
+  server.send(200, "text/plain", switchState ? "1" : "0");
+}
+
 void handleNotFound() {
   logMessage("404: " + server.uri());
   server.enableCORS(true);
@@ -107,6 +113,7 @@ void setup() {
   server.on("/", HTTP_GET, handlePing);
   server.on("/on", HTTP_GET, handleOn);
   server.on("/off", HTTP_GET, handleOff);
+  server.on("/status", HTTP_GET, handleStatus);
   server.onNotFound(handleNotFound);
 
   server.begin();
