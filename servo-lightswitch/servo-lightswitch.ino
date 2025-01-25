@@ -2,6 +2,15 @@
 #include <WebServer.h>
 #include <ESP32Servo.h>
 
+// use an ESP-32 to set up a tiny web server attached to a servo,
+// and use that servo to physically switch a single pole home lightswitch
+// on and off. you can then configure this as a light switch in homebridge using
+// https://github.com/Supereg/homebridge-http-switch
+// is it practical? no. but if you're renting a home wired in the stone age
+// before they ran neutral wires to all junction boxes, and you can't install
+// a real smart switch without frying yourself trying to pull a neutral
+// from the ceiling, this may have to do.
+
 const char *WIFI_SSID = "SSID_GOES_HERE";
 const char *WIFI_PASSWORD = "PASSWORD_GOES_HERE";
 

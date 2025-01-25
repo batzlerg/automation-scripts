@@ -3,14 +3,14 @@
 #include <ArduinoJson.h>
 #include <driver/gpio.h>
 
-// control a smart outlet linked into homebridge with an ESP-32.
+// use an ESP-32 to control a smart outlet configured within homebridge.
 // I used a single pole lightswitch because I liked the idea of embedding it
 // in a wall, but it was very impractical. you may want to simplify by
 // hooking up a standard momentary press button instead.
 
 // wifi
-const char *WIFI_SSID = "";
-const char *WIFI_PASSWORD = "";
+const char *WIFI_SSID = "SSID_GOES_HERE";
+const char *WIFI_PASSWORD = "PASSWORD_GOES_HERE";
 
 // homebridge config
 const char *HOMEBRIDGE_HOST = ""; // local network address of your homebridge server
