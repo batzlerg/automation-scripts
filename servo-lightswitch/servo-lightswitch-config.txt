@@ -1,0 +1,12 @@
+// paste the below into `homebridge-http-switch`
+// config for your new servo lightswitch device.
+// use the same static IP from your .ino file
+
+{
+    "accessory": "HTTP-SWITCH",
+    "name": "Servo Lightswitch",
+    "switchType": "stateful",
+    "onUrl": "http://STATIC_IP_HERE/on",
+    "offUrl": "http://STATIC_IP_HERE/off",
+    "statusUrl": "http://STATIC_IP_HERE/status"
+}
